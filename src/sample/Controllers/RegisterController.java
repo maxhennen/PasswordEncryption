@@ -3,7 +3,7 @@ package sample.Controllers;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.*;
-import sample.DomainClasses.User;
+import sample.Logic.User;
 import sample.ViewModel.UserUIRepo;
 
 import javax.swing.*;
@@ -64,6 +64,9 @@ public class RegisterController extends Controller {
             @Override
             public void handle(ActionEvent event) {
                 newUser();
+                JOptionPane.showMessageDialog(null,"User is registered!\n" +
+                        "You are now logged in");
+                closeScene(event);
             }
         });
         getAnchorpane().getChildren().add(btnRegister);

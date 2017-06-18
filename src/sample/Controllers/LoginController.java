@@ -55,6 +55,7 @@ public class LoginController extends Controller {
             @Override
             public void handle(ActionEvent event) {
                 newScene(new RegisterController(),"Register.fxml");
+                closeScene(event);
             }
         });
         getAnchorpane().getChildren().add(btnRegister);

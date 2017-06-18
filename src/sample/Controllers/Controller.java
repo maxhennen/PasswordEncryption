@@ -1,10 +1,12 @@
 package sample.Controllers;
 
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
+import java.awt.event.ActionEvent;
 import java.io.IOException;
 
 public abstract class Controller {
@@ -26,5 +28,9 @@ public abstract class Controller {
         catch (IOException e){
             System.out.println(e);
         }
+    }
+
+    public void closeScene(javafx.event.ActionEvent event){
+        ((Node)(event.getSource())).getScene().getWindow().hide();
     }
 }
