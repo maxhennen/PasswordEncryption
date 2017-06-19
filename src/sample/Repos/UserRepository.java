@@ -13,7 +13,11 @@ public class UserRepository {
         Context = context;
     }
 
-    public void newUser(User user){
-        Context.newUser(user);
+    public boolean newUser(User user){
+        return Context.newUser(user);
+    }
+
+    public User loginUser(String email, String password){
+        return Context.loginUser(email,password);
     }
 }

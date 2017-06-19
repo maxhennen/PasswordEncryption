@@ -12,7 +12,7 @@ import java.sql.SQLException;
  */
 public class UserSQLContext extends Database implements IUserSQL  {
 
-    public void newUser(User user){
+    public boolean newUser(User user){
         try {
             getConnection();
             String query = "INSERT INTO Users(email,userPassword,userName)VALUES(?,?,?);";
@@ -21,12 +21,46 @@ public class UserSQLContext extends Database implements IUserSQL  {
             Prep.setString(2,user.getPassword());
             Prep.setString(3,user.getName());
             Prep.executeUpdate();
+            Conn.close();
+            return true;
         }
         catch (SQLServerException e){
             JOptionPane.showMessageDialog(null,"Emai adress is already used");
+            return false;
+        }
+        catch (SQLException e){
+            JOptionPane.showMessageDialog(null,"Something went wrong!");
+            return false;
+        }
+    }
+
+    public User loginUser(String email, String password){
+        try {
+            getConnection();
+            String query = "SELECT * FROM Users WHERE email = ? and userPassword = ?;";
+            Prep = Conn.prepareStatement(query);
+            Prep.setString(1,email);
+            Prep.setString(2,password);
+            Results = Prep.executeQuery();
+
+            User user = null;
+
+            while (Results.next()){
+                user = new User();
+                user.setEmail(Results.getString("email"));
+                user.setName(Results.getString("userName"));
+            }
+
+            Conn.close();
+            return user;
+        }
+        catch (SQLServerException e){
+            e.printStackTrace();
+            return null;
         }
         catch (SQLException e){
             e.printStackTrace();
+            return null;
         }
     }
 }

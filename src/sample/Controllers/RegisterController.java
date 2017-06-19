@@ -63,20 +63,21 @@ public class RegisterController extends Controller {
         btnRegister.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                newUser();
-                JOptionPane.showMessageDialog(null,"User is registered!\n" +
-                        "You are now logged in");
-                closeScene(event);
+                newUser(event);
             }
         });
         getAnchorpane().getChildren().add(btnRegister);
     }
 
-    public void newUser(){
+    public void newUser(ActionEvent event){
         UserRepo = new UserUIRepo(new User());
 
         if(tfPassword.getText().equals(tfPasswordConfirm.getText())){
-            UserRepo.newUser(tfName.getText(),tfEmail.getText(),tfPassword.getText());
+            if(UserRepo.newUser(tfName.getText(),tfEmail.getText(),tfPassword.getText())){
+                JOptionPane.showMessageDialog(null,"Registration has been successful. You are now logged in");
+                newScene(new HomeController(),"Home.fxml");
+                closeScene(event);
+            }
         }
         else {
             JOptionPane.showMessageDialog(null,"The two password fields didn't match!");

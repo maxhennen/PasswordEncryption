@@ -13,7 +13,11 @@ public class UserUIRepo {
         Context = context;
     }
 
-    public void newUser(String name, String email, String password){
-        Context.newUser(name,email,password);
+    public boolean newUser(String name, String email, String password){
+       return Context.newUser(name,email,password);
+    }
+
+    public boolean Login(String email, String password){
+        return Context.Login(email,password);
     }
 }

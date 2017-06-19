@@ -37,14 +37,14 @@ public class User implements IUserUI {
     public void setEmail(String email){Email = email;}
     public void setPassword(String password){Password = password;}
 
-    public void newUser(String name, String email, String password){
+    public boolean newUser(String name, String email, String password){
         setName(name);
         setEmail(email);
         setPassword(MD5Password(password));
         saveNewKey();
 
         UserRepo = new UserRepository(new UserSQLContext());
-        UserRepo.newUser(this);
+        return UserRepo.newUser(this);
     }
 
     public void saveNewKey(){
@@ -79,7 +79,14 @@ public class User implements IUserUI {
         }
     }
 
-    public void Login(String email, String password){
-        
+    public boolean Login(String email, String password){
+        UserRepo = new UserRepository(new UserSQLContext());
+
+        if(UserRepo.loginUser(email,MD5Password(password)) != null){
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 }

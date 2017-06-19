@@ -7,7 +7,10 @@ import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import sample.Logic.User;
+import sample.ViewModel.UserUIRepo;
 
+import javax.swing.*;
 import java.awt.*;
 
 /**
@@ -16,9 +19,10 @@ import java.awt.*;
 public class LoginController extends Controller {
 
     private TextField tfLoginName;
-    private TextField tfLoginPassword;
+    private PasswordField tfLoginPassword;
     private Button btnLogin;
     private Button btnRegister;
+    private UserUIRepo UserRepo;
 
     public void setLayout(){
         tfLoginName = new TextField();
@@ -26,11 +30,11 @@ public class LoginController extends Controller {
         tfLoginName.setLayoutY(50);
         tfLoginName.setPrefHeight(27);
         tfLoginName.setPrefWidth(200);
-        tfLoginName.setPromptText("Login Name");
+        tfLoginName.setPromptText("Email");
         getAnchorpane().getChildren().add(tfLoginName);
 
-        tfLoginPassword = new TextField();
-        tfLoginPassword.setLayoutY(80);
+        tfLoginPassword = new PasswordField();
+        tfLoginPassword.setLayoutY(90);
         tfLoginPassword.setLayoutX(50);
         tfLoginPassword.setPrefWidth(200);
         tfLoginPassword.setPrefHeight(27);
@@ -39,10 +43,16 @@ public class LoginController extends Controller {
 
         btnLogin = new Button();
         btnLogin.setLayoutX(50);
-        btnLogin.setLayoutY(110);
+        btnLogin.setLayoutY(130);
         btnLogin.setPrefWidth(200);
         btnLogin.setPrefHeight(27);
         btnLogin.setText("Login");
+        btnLogin.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                Login(event);
+            }
+        });
         getAnchorpane().getChildren().add(btnLogin);
 
         btnRegister = new Button();
@@ -60,4 +70,18 @@ public class LoginController extends Controller {
         });
         getAnchorpane().getChildren().add(btnRegister);
     }
+
+    public void Login(ActionEvent event){
+        UserRepo = new UserUIRepo(new User());
+
+        if(UserRepo.Login(tfLoginName.getText(),tfLoginPassword.getText())){
+            newScene(new HomeController(),"Home.fxml");
+            closeScene(event);
+        }
+        else {
+            JOptionPane.showMessageDialog(null,"Login data is not correct!");
+        }
+    }
 }
+
+
