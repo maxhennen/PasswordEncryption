@@ -14,7 +14,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         FXMLLoader loader = new FXMLLoader(getClass().getResource("UI/Login.fxml"));
         AnchorPane root = (AnchorPane) loader.load();
-        Controller controller = new LoginController();
+        Controller controller = new LoginController(null);
         controller.setAnchorpane(root);
         controller.setLayout();
         primaryStage.setTitle("Login");

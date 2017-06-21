@@ -21,6 +21,10 @@ public class RegisterController extends Controller {
     private Button btnRegister;
     private UserUIRepo UserRepo;
 
+    public RegisterController(User user){
+        super(user);
+    }
+
     public void setLayout(){
         tfName = new TextField();
         tfName.setLayoutX(50);
@@ -72,12 +76,12 @@ public class RegisterController extends Controller {
     public void newUser(ActionEvent event){
         UserRepo = new UserUIRepo(new User());
 
-        if(tfPassword.getText().equals(tfPasswordConfirm.getText())){
-            if(UserRepo.newUser(tfName.getText(),tfEmail.getText(),tfPassword.getText())){
-                JOptionPane.showMessageDialog(null,"Registration has been successful. You are now logged in");
-                newScene(new HomeController(),"Home.fxml");
-                closeScene(event);
-            }
+        setUser(UserRepo.newUser(tfName.getText(),tfEmail.getText(),tfPassword.getText()));
+
+        if(getUser() != null){
+            JOptionPane.showMessageDialog(null,"Registration has been successful. You can now login");
+            newScene("Login.fxml", new LoginController(null));
+            closeScene(event);
         }
         else {
             JOptionPane.showMessageDialog(null,"The two password fields didn't match!");

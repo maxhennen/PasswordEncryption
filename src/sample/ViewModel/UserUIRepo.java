@@ -2,6 +2,9 @@ package sample.ViewModel;
 
 import sample.Controllers.Controller;
 import sample.Interfaces.IUserUI;
+import sample.Logic.User;
+
+import java.util.ArrayList;
 
 /**
  * Created by maxhe on 18-6-2017.
@@ -13,11 +16,12 @@ public class UserUIRepo {
         Context = context;
     }
 
-    public boolean newUser(String name, String email, String password){
+    public User newUser(String name, String email, String password){
        return Context.newUser(name,email,password);
     }
 
-    public boolean Login(String email, String password){
+    public User Login(String email, String password){
         return Context.Login(email,password);
     }
+
 }

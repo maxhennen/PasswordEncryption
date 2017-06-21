@@ -18,6 +18,10 @@ import java.awt.*;
  */
 public class LoginController extends Controller {
 
+    public LoginController(User user){
+        super(user);
+    }
+
     private TextField tfLoginName;
     private PasswordField tfLoginPassword;
     private Button btnLogin;
@@ -64,7 +68,7 @@ public class LoginController extends Controller {
         btnRegister.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                newScene(new RegisterController(),"Register.fxml");
+                newScene("Register.fxml", new RegisterController(getUser()));
                 closeScene(event);
             }
         });
@@ -74,8 +78,9 @@ public class LoginController extends Controller {
     public void Login(ActionEvent event){
         UserRepo = new UserUIRepo(new User());
 
-        if(UserRepo.Login(tfLoginName.getText(),tfLoginPassword.getText())){
-            newScene(new HomeController(),"Home.fxml");
+        if(UserRepo.Login(tfLoginName.getText(),tfLoginPassword.getText()) != null){
+            setUser(UserRepo.Login(tfLoginName.getText(),tfLoginPassword.getText()));
+            newScene("Home.fxml", new HomeController(getUser()));
             closeScene(event);
         }
         else {

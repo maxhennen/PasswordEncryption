@@ -6,13 +6,14 @@ import sample.Interfaces.IUserSQL;
 
 import javax.swing.*;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 /**
  * Created by maxhe on 18-6-2017.
  */
 public class UserSQLContext extends Database implements IUserSQL  {
 
-    public boolean newUser(User user){
+    public User newUser(User user){
         try {
             getConnection();
             String query = "INSERT INTO Users(email,userPassword,userName)VALUES(?,?,?);";
@@ -22,15 +23,16 @@ public class UserSQLContext extends Database implements IUserSQL  {
             Prep.setString(3,user.getName());
             Prep.executeUpdate();
             Conn.close();
-            return true;
+
+            return user;
         }
         catch (SQLServerException e){
             JOptionPane.showMessageDialog(null,"Emai adress is already used");
-            return false;
+            return null;
         }
         catch (SQLException e){
             JOptionPane.showMessageDialog(null,"Something went wrong!");
-            return false;
+            return null;
         }
     }
 

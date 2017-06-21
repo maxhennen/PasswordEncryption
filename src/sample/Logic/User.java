@@ -5,6 +5,8 @@ import sample.Interfaces.IUserUI;
 import sample.Repos.UserRepository;
 
 import javax.crypto.spec.SecretKeySpec;
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 import java.math.BigInteger;
 import java.nio.charset.Charset;
@@ -37,12 +39,11 @@ public class User implements IUserUI {
     public void setEmail(String email){Email = email;}
     public void setPassword(String password){Password = password;}
 
-    public boolean newUser(String name, String email, String password){
+    public User newUser(String name, String email, String password){
         setName(name);
         setEmail(email);
         setPassword(MD5Password(password));
         saveNewKey();
-
         UserRepo = new UserRepository(new UserSQLContext());
         return UserRepo.newUser(this);
     }
@@ -79,14 +80,21 @@ public class User implements IUserUI {
         }
     }
 
-    public boolean Login(String email, String password){
+    public User Login(String email, String password){
         UserRepo = new UserRepository(new UserSQLContext());
+        loadKey(email);
+        return UserRepo.loginUser(email,MD5Password(password));
+    }
 
-        if(UserRepo.loginUser(email,MD5Password(password)) != null){
-            return true;
+    public void loadKey(String email){
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(email + ".txt"));
+            String line = reader.readLine();
+            byte[] decode = Base64.getDecoder().decode(line);
+            Key = new SecretKeySpec(decode,0,decode.length,"Des");
         }
-        else {
-            return false;
+        catch (IOException e){
+            e.printStackTrace();
         }
     }
 }
