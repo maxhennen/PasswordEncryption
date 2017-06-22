@@ -2,6 +2,7 @@ package sample.Interfaces;
 
 import com.sun.xml.internal.ws.api.pipe.PipelineAssembler;
 import sample.Logic.Password;
+import sample.Logic.User;
 
 import java.util.ArrayList;
 
@@ -10,4 +11,5 @@ import java.util.ArrayList;
  */
 public interface IPasswordSQL {
     ArrayList<Password> passwordUser(String email);
+    void newPassword(User user, Password password);
 }

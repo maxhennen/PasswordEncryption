@@ -3,6 +3,7 @@ package sample.Data;
 import com.sun.org.apache.regexp.internal.RE;
 import sample.Interfaces.IPasswordSQL;
 import sample.Logic.Password;
+import sample.Logic.User;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -32,6 +33,22 @@ public class PasswordSQLContext extends Database implements IPasswordSQL {
         catch (SQLException e){
             e.printStackTrace();
             return null;
+        }
+    }
+
+    public void newPassword(User user, Password password){
+        try {
+            getConnection();
+            String query = "INSERT INTO Passwords(userMail, nameContent, encryptedPassword)Values(?,?,?);";
+            Prep = Conn.prepareStatement(query);
+            Prep.setString(1,user.getEmail());
+            Prep.setString(2,password.getContent());
+            Prep.setString(3,password.getPassword());
+            Prep.executeUpdate();
+        }
+
+        catch (SQLException e){
+
         }
     }
 }

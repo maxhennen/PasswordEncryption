@@ -4,12 +4,18 @@ import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import sample.Exceptions.PasswordIncorrectException;
+import sample.Logic.Password;
 import sample.Logic.User;
 import sample.Repos.UserRepository;
+import sample.ViewModel.PasswordUIRepo;
 import sample.ViewModel.UserUIRepo;
 
 import javax.jws.soap.SOAPBinding;
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 
 /**
@@ -18,10 +24,15 @@ import java.awt.event.ActionEvent;
 public class HomeController extends Controller {
 
     private Label lblUitloggen;
-    private Button btnPasswords;
     private Button btnAddPassword;
+    private TextField tfContent;
+    private PasswordField tfPassword;
+    private PasswordField tfPasswordConfirm;
     private Label lblWelkom;
-    private UserUIRepo UserRepo;
+    private PasswordUIRepo PasswordRepo;
+
+    private int X = 0;
+    private int Y = 70;
 
     public HomeController(User user){
         super(user);
@@ -52,6 +63,64 @@ public class HomeController extends Controller {
         lblWelkom.setText("Welkom " + getUser().getName());
         getAnchorpane().getChildren().add(lblWelkom);
 
-        UserRepo = new UserUIRepo(new User());
+
+        //foreach
+
+        tfContent = new TextField();
+        tfContent.setLayoutX(50);
+        tfContent.setLayoutY(50);
+        tfContent.setPrefHeight(27);
+        tfContent.setPrefWidth(200);
+        tfContent.setPromptText("Content");
+        getAnchorpane().getChildren().add(tfContent);
+
+        tfPassword = new PasswordField();
+        tfPassword.setLayoutX(270);
+        tfPassword.setLayoutY(50);
+        tfPassword.setPrefWidth(200);
+        tfPassword.setPrefHeight(27);
+        tfPassword.setPromptText("Password");
+        getAnchorpane().getChildren().add(tfPassword);
+
+        tfPasswordConfirm = new PasswordField();
+        tfPasswordConfirm.setLayoutX(490);
+        tfPasswordConfirm.setLayoutY(50);
+        tfPasswordConfirm.setPrefWidth(200);
+        tfPasswordConfirm.setPrefHeight(27);
+        tfPasswordConfirm.setPromptText("Confirm Password");
+        getAnchorpane().getChildren().add(tfPasswordConfirm);
+
+        btnAddPassword = new Button();
+        btnAddPassword.setLayoutX(710);
+        btnAddPassword.setLayoutY(50);
+        btnAddPassword.setPrefHeight(27);
+        btnAddPassword.setPrefWidth(200);
+        btnAddPassword.setText("Add Password");
+        btnAddPassword.setOnAction(new EventHandler<javafx.event.ActionEvent>() {
+            @Override
+            public void handle(javafx.event.ActionEvent event) {
+                newPassword();
+            }
+        });
+        getAnchorpane().getChildren().add(btnAddPassword);
+    }
+
+    public int calculateY(){
+        return Y = Y + 40;
+    }
+
+    public void newPassword(){
+        try {
+            if (tfPassword.getText().equals(tfPasswordConfirm.getText())) {
+                PasswordRepo = new PasswordUIRepo(new Password());
+                PasswordRepo.newPassword(getUser(),tfContent.getText(),tfPassword.getText());
+            }
+            else {
+                throw new PasswordIncorrectException();
+            }
+        }
+        catch (PasswordIncorrectException e){
+            JOptionPane.showMessageDialog(null,e.toString());
+        }
     }
 }

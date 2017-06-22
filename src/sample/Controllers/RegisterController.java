@@ -3,6 +3,7 @@ package sample.Controllers;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.*;
+import sample.Exceptions.PasswordIncorrectException;
 import sample.Logic.User;
 import sample.ViewModel.UserUIRepo;
 
@@ -73,18 +74,24 @@ public class RegisterController extends Controller {
         getAnchorpane().getChildren().add(btnRegister);
     }
 
-    public void newUser(ActionEvent event){
-        UserRepo = new UserUIRepo(new User());
+    public void newUser(ActionEvent event) {
+        try {
+            UserRepo = new UserUIRepo(new User());
 
-        setUser(UserRepo.newUser(tfName.getText(),tfEmail.getText(),tfPassword.getText()));
-
-        if(getUser() != null){
-            JOptionPane.showMessageDialog(null,"Registration has been successful. You can now login");
-            newScene("Login.fxml", new LoginController(null));
-            closeScene(event);
+            setUser(UserRepo.newUser(tfName.getText(), tfEmail.getText(), tfPassword.getText()));
+            if (tfPassword.getText().equals(tfPasswordConfirm.getText())) {
+                if (getUser() != null) {
+                    JOptionPane.showMessageDialog(null, "Registration has been successful. You can now login");
+                    newScene("Login.fxml", new LoginController(null));
+                    closeScene(event);
+                }
+            }
+            else {
+                throw new PasswordIncorrectException();
+            }
         }
-        else {
-            JOptionPane.showMessageDialog(null,"The two password fields didn't match!");
+        catch(PasswordIncorrectException e){
+            JOptionPane.showMessageDialog(null, e.getMessage());
         }
     }
 }

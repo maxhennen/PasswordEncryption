@@ -3,6 +3,7 @@ package sample.Repos;
 import sample.Controllers.Controller;
 import sample.Interfaces.IPasswordSQL;
 import sample.Logic.Password;
+import sample.Logic.User;
 
 import java.util.ArrayList;
 
@@ -18,5 +19,9 @@ public class PasswordRepositry {
 
     public ArrayList<Password> passwordUser(String email){
         return Context.passwordUser(email);
+    }
+
+    public void newPassword(User user, Password password){
+        Context.newPassword(user,password);
     }
 }
