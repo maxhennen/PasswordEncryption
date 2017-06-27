@@ -1,8 +1,18 @@
 package sample.Logic;
 
+import com.twilio.Twilio;
+import com.twilio.rest.api.v2010.account.Message;
+import com.twilio.type.PhoneNumber;
+import com.twilio.exception.TwilioException;
+import com.twilio.http.TwilioRestClient;
+import com.twilio.rest.chat.v1.service.channel.MessageCreator;
+import org.apache.commons.mail.EmailException;
+import org.apache.commons.mail.SimpleEmail;
+import org.hsqldb.Session;
 import sample.Data.UserSQLContext;
 import sample.Interfaces.IUserUI;
 import sample.Repos.UserRepository;
+import javax.net.*;
 
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
@@ -19,9 +29,9 @@ import java.nio.file.Paths;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
-import java.util.ArrayList;
-import java.util.Base64;
-import java.util.SplittableRandom;
+import java.util.*;
+
+import static sun.net.ftp.impl.FtpClient.create;
 
 /**
  * Created by maxhe on 18-6-2017.
@@ -30,40 +40,34 @@ public class User implements IUserUI {
     private String Name;
     private String Email;
     private String Password;
+    private String PhoneNumber;
     private SecretKey Key;
     private UserRepository UserRepo;
 
     public String getName(){return Name;}
     public String getEmail(){return Email;}
     public String getPassword(){return Password;}
+    public String getPhoneNumber(){return PhoneNumber;}
     public SecretKey getKey(){return Key;}
 
     public void setName(String name){Name = name;}
     public void setEmail(String email){Email = email;}
     public void setPassword(String password){Password = password;}
-    private Encrypt Encrypt = new Encrypt();
+    public void setPhoneNumber(String phoneNumber){PhoneNumber = phoneNumber;}
 
-    public User newUser(String name, String email, String password){
+    private Encrypt Encrypt = new Encrypt();
+    private String TwilioSID = "AC0e7ecf6b3e893d1bc8ca45799f76f6bb";
+    private String TwilioAuth = "8bc638717b8f3a0804e2ed1f24a695d6";
+
+    public User newUser(String name, String email, String password, String phone){
         setName(name);
         setEmail(email);
         setPassword(MD5Password(password));
+        setPhoneNumber(phone);
         UserRepo = new UserRepository(new UserSQLContext());
-        saveKey();
         return UserRepo.newUser(this);
     }
 
-    public void saveKey(){
-        try {
-            ArrayList<String> lines = new ArrayList();
-            String key = Base64.getEncoder().encodeToString(Encrypt.RandomKey().getEncoded());
-            lines.add(key);
-            Path file = Paths.get(getEmail() + ".txt");
-            Files.write(file, lines, Charset.forName("UTF-8"));
-        }
-        catch (IOException e){
-            e.printStackTrace();
-        }
-    }
 
     public String MD5Password(String password){
         try {
@@ -79,25 +83,54 @@ public class User implements IUserUI {
 
     public User Login(String email, String password){
         UserRepo = new UserRepository(new UserSQLContext());
-        return UserRepo.loginUser(email,MD5Password(password));
+        User user = UserRepo.loginUser(email,MD5Password(password));
+        return user;
     }
 
-    public SecretKey loadKey(String email){
+    public String SendSMS(String phoneNumber){
         try {
-            BufferedReader reader = new BufferedReader(new FileReader(email + ".txt"));
-            String line = reader.readLine();
-            byte[] decode = Base64.getDecoder().decode(line);
-            Key = new SecretKeySpec(decode,0,decode.length,"DES");
-            return Key;
-        }
+            Twilio.init(TwilioSID, TwilioAuth);
 
-        catch (FileNotFoundException e){
-            return null;
-        }
+            String validationCode = randomString();
 
-        catch (IOException e){
+            Message message = Message.creator(new PhoneNumber(phoneNumber),new PhoneNumber("+3197004498649"),
+                    "Here's your validation code: " + validationCode).create();
+            return validationCode;
+        }
+        catch (TwilioException e){
             e.printStackTrace();
             return null;
         }
+    }
+
+    public String randomString(){
+        char[] chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890".toCharArray();
+        StringBuilder sb = new StringBuilder();
+        Random random = new Random();
+        for (int i = 0; i < 8; i++) {
+            char c = chars[random.nextInt(chars.length)];
+            sb.append(c);
+        }
+        return sb.toString();
+    }
+
+    public String sendNewPassword(String email){
+        try {
+            String newPassword = randomString();
+
+            SimpleEmail simpleEmail = new SimpleEmail();
+            simpleEmail.setHostName("smtp.gmail.com");
+            simpleEmail.addTo(email, "Unknown");
+            simpleEmail.setFrom("no-reply@passwordSecurity.com", "PasswordSecurity");
+            simpleEmail.setSubject("New Password PasswordSecurity");
+            simpleEmail.setMsg("Here's your new pasword: " + newPassword);
+            simpleEmail.send();
+            return newPassword;
+        }
+        catch (EmailException e){
+            e.printStackTrace();
+            return null;
+        }
+
     }
 }

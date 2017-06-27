@@ -16,12 +16,14 @@ public class UserUIRepo {
         Context = context;
     }
 
-    public User newUser(String name, String email, String password){
-       return Context.newUser(name,email,password);
+    public User newUser(String name, String email, String password, String phone){
+       return Context.newUser(name,email,password, phone);
     }
 
     public User Login(String email, String password){
         return Context.Login(email,password);
     }
+    public String SendSMS(String phoneNumber){return Context.SendSMS(phoneNumber);}
+    public String sendNewPassword(String email){return Context.sendNewPassword(email);}
 
 }

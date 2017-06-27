@@ -16,14 +16,14 @@ public class UserSQLContext extends Database implements IUserSQL  {
     public User newUser(User user){
         try {
             getConnection();
-            String query = "INSERT INTO Users(email,userPassword,userName)VALUES(?,?,?);";
+            String query = "INSERT INTO Users(email,userPassword,userName,phoneNumber)VALUES(?,?,?,?);";
             Prep = Conn.prepareStatement(query);
             Prep.setString(1,user.getEmail());
             Prep.setString(2,user.getPassword());
             Prep.setString(3,user.getName());
+            Prep.setString(4,user.getPhoneNumber());
             Prep.executeUpdate();
             Conn.close();
-
             return user;
         }
         catch (SQLServerException e){
@@ -51,6 +51,7 @@ public class UserSQLContext extends Database implements IUserSQL  {
                 user = new User();
                 user.setEmail(Results.getString("email"));
                 user.setName(Results.getString("userName"));
+                user.setPhoneNumber(Results.getString("phoneNumber"));
             }
 
             Conn.close();

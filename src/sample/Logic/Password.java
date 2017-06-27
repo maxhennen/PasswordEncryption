@@ -25,12 +25,24 @@ public class Password implements IPasswordUI {
     public String getContent(){return Content;}
     public void setContent(String content){Content = content;}
 
-    public ArrayList<String> passwordsUser(String email){
-        return null;
+    public ArrayList<Password> passwordsUser(User user){
+        PasswordRepo = new PasswordRepositry(new PasswordSQLContext());
+
+        ArrayList<Password> passwords = new ArrayList<>();
+
+        passwords.clear();
+
+        for(sample.Logic.Password p: PasswordRepo.passwordUser(user.getEmail())){
+            String encrypted = p.getPassword();
+           // p.setPassword(Encrypt.Decryption(user.loadKey(user.getEmail()),encrypted));
+            passwords.add(p);
+        }
+
+        return passwords;
     }
 
     public void newPassword(User user, String password, String content){
-        setPassword(Encrypt.Encryption(password.getBytes(),user.loadKey(user.getEmail())));
+       // setPassword(Encrypt.Encryption(password,user.loadKey(user.getEmail())));
         setContent(content);
         PasswordRepo = new PasswordRepositry(new PasswordSQLContext());
         PasswordRepo.newPassword(user,this);

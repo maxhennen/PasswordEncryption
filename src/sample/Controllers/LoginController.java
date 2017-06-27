@@ -6,6 +6,7 @@ import javafx.event.EventHandler;
 import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import sample.Logic.User;
 import sample.ViewModel.UserUIRepo;
@@ -25,8 +26,10 @@ public class LoginController extends Controller {
     private TextField tfLoginName;
     private PasswordField tfLoginPassword;
     private Button btnLogin;
-    private Button btnRegister;
+    private javafx.scene.control.Label lblRegister;
     private UserUIRepo UserRepo;
+    private CheckBox cbExtraLogin;
+    private javafx.scene.control.Label lblForgotPassword;
 
     public void setLayout(){
         tfLoginName = new TextField();
@@ -59,30 +62,60 @@ public class LoginController extends Controller {
         });
         getAnchorpane().getChildren().add(btnLogin);
 
-        btnRegister = new Button();
-        btnRegister.setLayoutY(10);
-        btnRegister.setLayoutX(10);
-        btnRegister.setPrefHeight(27);
-        btnRegister.setPrefWidth(200);
-        btnRegister.setText("Register");
-        btnRegister.setOnAction(new EventHandler<ActionEvent>() {
+        lblRegister = new javafx.scene.control.Label();
+        lblRegister.setLayoutY(10);
+        lblRegister.setLayoutX(10);
+        lblRegister.setPrefHeight(27);
+        lblRegister.setPrefWidth(200);
+        lblRegister.setText("Register");
+        lblRegister.setStyle("-fx-underline: true;");
+        lblRegister.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
-            public void handle(ActionEvent event) {
-                newScene("Register.fxml", new RegisterController(getUser()));
+            public void handle(MouseEvent event) {
+                newScene("Register.fxml",new RegisterController(getUser()));
                 closeScene(event);
             }
         });
-        getAnchorpane().getChildren().add(btnRegister);
+        getAnchorpane().getChildren().add(lblRegister);
+
+        cbExtraLogin = new CheckBox();
+        cbExtraLogin.setLayoutX(50);
+        cbExtraLogin.setLayoutY(170);
+        cbExtraLogin.setPrefHeight(27);
+        cbExtraLogin.setPrefWidth(200);
+        cbExtraLogin.setText("Extra control by SMS");
+        getAnchorpane().getChildren().add(cbExtraLogin);
+
+        lblForgotPassword = new javafx.scene.control.Label();
+        lblForgotPassword.setLayoutX(50);
+        lblForgotPassword.setLayoutY(210);
+        lblForgotPassword.setPrefHeight(27);
+        lblForgotPassword.setPrefWidth(200);
+        lblForgotPassword.setText("Forgot Password?");
+        lblForgotPassword.setStyle("-fx-underline: true;");
+        lblForgotPassword.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                newScene("ForgotPassword.fxml",new ForgotPasswordController(null));
+                closeScene(event);
+            }
+        });
+        getAnchorpane().getChildren().add(lblForgotPassword);
     }
 
     public void Login(ActionEvent event){
         UserRepo = new UserUIRepo(new User());
+        setUser(UserRepo.Login(tfLoginName.getText(),tfLoginPassword.getText()));
 
-        if(UserRepo.Login(tfLoginName.getText(),tfLoginPassword.getText()) != null){
-            setUser(UserRepo.Login(tfLoginName.getText(),tfLoginPassword.getText()));
-            newScene("Home.fxml", new HomeController(getUser()));
-            closeScene(event);
+        if(getUser() != null){
+            if(cbExtraLogin.isSelected()){
+                newScene("PhoneLogin.fxml",new PhoneLoginController(getUser()));
+            }
+            else {
+                newScene("Home.fxml",new HomeController(getUser()));
+            }
         }
+
         else {
             JOptionPane.showMessageDialog(null,"Login data is not correct!");
         }

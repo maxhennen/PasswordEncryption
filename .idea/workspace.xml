@@ -2,33 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample/Exceptions/PasswordIncorrectException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample/Interfaces/IPasswordUI.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample/ViewModel/PasswordUIRepo.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hennenmax@gmail.com.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PasswordEncryption/sample/Logic/EncryptDecrypt.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/Logic/EncryptDecrypt.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample/Controllers/ForgotPasswordController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample/Controllers/PhoneLoginController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample/UI/ForgotPassword.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample/UI/PhoneLogin.fxml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/123.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PasswordEncryption/sample/Controllers/HomeController$1.class" afterPath="$PROJECT_DIR$/out/production/PasswordEncryption/sample/Controllers/HomeController$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PasswordEncryption/sample/Controllers/HomeController$2.class" afterPath="$PROJECT_DIR$/out/production/PasswordEncryption/sample/Controllers/HomeController$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PasswordEncryption/sample/Controllers/HomeController.class" afterPath="$PROJECT_DIR$/out/production/PasswordEncryption/sample/Controllers/HomeController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PasswordEncryption/sample/Controllers/LoginController$1.class" afterPath="$PROJECT_DIR$/out/production/PasswordEncryption/sample/Controllers/LoginController$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PasswordEncryption/sample/Controllers/LoginController$2.class" afterPath="$PROJECT_DIR$/out/production/PasswordEncryption/sample/Controllers/LoginController$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PasswordEncryption/sample/Controllers/LoginController.class" afterPath="$PROJECT_DIR$/out/production/PasswordEncryption/sample/Controllers/LoginController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PasswordEncryption/sample/Controllers/RegisterController$1.class" afterPath="$PROJECT_DIR$/out/production/PasswordEncryption/sample/Controllers/RegisterController$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PasswordEncryption/sample/Controllers/RegisterController.class" afterPath="$PROJECT_DIR$/out/production/PasswordEncryption/sample/Controllers/RegisterController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PasswordEncryption/sample/Data/PasswordSQLContext.class" afterPath="$PROJECT_DIR$/out/production/PasswordEncryption/sample/Data/PasswordSQLContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PasswordEncryption/sample/Interfaces/IPasswordSQL.class" afterPath="$PROJECT_DIR$/out/production/PasswordEncryption/sample/Interfaces/IPasswordSQL.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PasswordEncryption/sample/Data/UserSQLContext.class" afterPath="$PROJECT_DIR$/out/production/PasswordEncryption/sample/Data/UserSQLContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PasswordEncryption/sample/Interfaces/IPasswordUI.class" afterPath="$PROJECT_DIR$/out/production/PasswordEncryption/sample/Interfaces/IPasswordUI.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PasswordEncryption/sample/Interfaces/IUserUI.class" afterPath="$PROJECT_DIR$/out/production/PasswordEncryption/sample/Interfaces/IUserUI.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PasswordEncryption/sample/Logic/Encrypt.class" afterPath="$PROJECT_DIR$/out/production/PasswordEncryption/sample/Logic/Encrypt.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PasswordEncryption/sample/Logic/Password.class" afterPath="$PROJECT_DIR$/out/production/PasswordEncryption/sample/Logic/Password.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PasswordEncryption/sample/Logic/User.class" afterPath="$PROJECT_DIR$/out/production/PasswordEncryption/sample/Logic/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PasswordEncryption/sample/Repos/PasswordRepositry.class" afterPath="$PROJECT_DIR$/out/production/PasswordEncryption/sample/Repos/PasswordRepositry.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PasswordEncryption/sample/ViewModel/PasswordUIRepo.class" afterPath="$PROJECT_DIR$/out/production/PasswordEncryption/sample/ViewModel/PasswordUIRepo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PasswordEncryption/sample/ViewModel/UserUIRepo.class" afterPath="$PROJECT_DIR$/out/production/PasswordEncryption/sample/ViewModel/UserUIRepo.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PasswordEncryption/sample/UI/Home.fxml" afterPath="$PROJECT_DIR$/out/production/PasswordEncryption/sample/UI/Home.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Controllers/HomeController.java" afterPath="$PROJECT_DIR$/src/sample/Controllers/HomeController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Controllers/LoginController.java" afterPath="$PROJECT_DIR$/src/sample/Controllers/LoginController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Controllers/RegisterController.java" afterPath="$PROJECT_DIR$/src/sample/Controllers/RegisterController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Data/PasswordSQLContext.java" afterPath="$PROJECT_DIR$/src/sample/Data/PasswordSQLContext.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Interfaces/IPasswordSQL.java" afterPath="$PROJECT_DIR$/src/sample/Interfaces/IPasswordSQL.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Data/UserSQLContext.java" afterPath="$PROJECT_DIR$/src/sample/Data/UserSQLContext.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Interfaces/IPasswordUI.java" afterPath="$PROJECT_DIR$/src/sample/Interfaces/IPasswordUI.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Interfaces/IUserUI.java" afterPath="$PROJECT_DIR$/src/sample/Interfaces/IUserUI.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Logic/Encrypt.java" afterPath="$PROJECT_DIR$/src/sample/Logic/Encrypt.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Logic/Password.java" afterPath="$PROJECT_DIR$/src/sample/Logic/Password.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Logic/User.java" afterPath="$PROJECT_DIR$/src/sample/Logic/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Repos/PasswordRepositry.java" afterPath="$PROJECT_DIR$/src/sample/Repos/PasswordRepositry.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/UI/Home.fxml" afterPath="$PROJECT_DIR$/src/sample/UI/Home.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/ViewModel/PasswordUIRepo.java" afterPath="$PROJECT_DIR$/src/sample/ViewModel/PasswordUIRepo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/ViewModel/UserUIRepo.java" afterPath="$PROJECT_DIR$/src/sample/ViewModel/UserUIRepo.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,7 +47,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/PasswordEncryption$Main.coverage" NAME="Main Coverage Results" MODIFIED="1498077552057" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/PasswordEncryption$Main.coverage" NAME="Main Coverage Results" MODIFIED="1498250206440" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>sample.Controllers.*</FILTER>
     </SUITE>
   </component>
@@ -92,11 +98,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/Logic/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="84" column="20" lean-forward="false" selection-start-line="84" selection-start-column="20" selection-end-line="84" selection-end-column="20" />
+            <state relative-caret-position="385">
+              <caret line="120" column="0" lean-forward="false" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -107,47 +113,21 @@
       <file leaf-file-name="UserSQLContext.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Data/UserSQLContext.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <state relative-caret-position="357">
+              <caret line="53" column="66" lean-forward="false" selection-start-line="53" selection-start-column="66" selection-end-line="53" selection-end-column="66" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1498076429848" expanded="true" signature="439:498" ph="INSERT INTO Users... " />
-                <marker date="1498076429848" expanded="true" signature="1218:1274" ph="SELECT * FRO... Users" />
+                <marker date="1498592228449" expanded="true" signature="439:512" ph="INSERT INTO Users... " />
+                <marker date="1498592228449" expanded="true" signature="1284:1340" ph="SELECT * FRO... Users" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Password.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/sample/Logic/Password.java">
+      <file leaf-file-name="UserUIRepo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/ViewModel/UserUIRepo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
-              <caret line="35" column="44" lean-forward="true" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PasswordUIRepo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/ViewModel/PasswordUIRepo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#351#352#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Encrypt.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Logic/Encrypt.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="716">
-              <caret line="50" column="24" lean-forward="false" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
+            <state relative-caret-position="378">
+              <caret line="26" column="86" lean-forward="false" selection-start-line="26" selection-start-column="86" selection-end-line="26" selection-end-column="86" />
               <folding />
             </state>
           </provider>
@@ -156,11 +136,74 @@
       <file leaf-file-name="HomeController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Controllers/HomeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-61">
-              <caret line="102" column="0" lean-forward="false" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+            <state relative-caret-position="649">
+              <caret line="54" column="51" lean-forward="false" selection-start-line="54" selection-start-column="51" selection-end-line="54" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IUserUI.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Interfaces/IUserUI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="13" column="41" lean-forward="false" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PhoneLoginController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Controllers/PhoneLoginController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="261">
+              <caret line="58" column="47" lean-forward="false" selection-start-line="58" selection-start-column="47" selection-end-line="58" selection-end-column="47" />
+              <folding>
+                <element signature="e#1311#1312#0" expanded="true" />
+                <element signature="e#1358#1359#0" expanded="true" />
+                <element signature="e#1871#1872#0" expanded="true" />
+                <element signature="e#1912#1913#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Controllers/LoginController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="417">
+              <caret line="102" column="61" lean-forward="false" selection-start-line="102" selection-start-column="61" selection-end-line="102" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3346#3347#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ForgotPassword.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/UI/ForgotPassword.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ForgotPasswordController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Controllers/ForgotPasswordController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="43" column="34" lean-forward="false" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#417#418#0" expanded="true" />
+                <element signature="e#444#445#0" expanded="true" />
+                <element signature="e#1220#1221#0" expanded="true" />
+                <element signature="e#1269#1270#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -171,11 +214,31 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Interface" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>c</find>
+      <find>create</find>
+      <find>create</find>
+      <find>M</find>
+      <find>Messa</find>
+      <find>Message</find>
+      <find>Message c</find>
+      <find>Message cr</find>
+      <find>Message cre</find>
+      <find>Message crea</find>
+      <find>Message creat</find>
+      <find>Message create</find>
+    </findStrings>
+    <dirStrings>
+      <dir>C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext\twilio-7.12.0.jar</dir>
+      <dir>C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext\twilio-7.12.0-jar-with-dependencies.jar</dir>
+    </dirStrings>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -201,27 +264,33 @@
         <option value="$PROJECT_DIR$/src/sample/DomainClasses/EncryptDecrypt.java" />
         <option value="$PROJECT_DIR$/src/sample/Data/Database.java" />
         <option value="$PROJECT_DIR$/src/sample/DomainClasses/User.java" />
-        <option value="$PROJECT_DIR$/src/sample/Controllers/LoginController.java" />
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/sample/Controllers/Controller.java" />
-        <option value="$PROJECT_DIR$/src/sample/Interfaces/IUserUI.java" />
         <option value="$PROJECT_DIR$/src/sample/Interfaces/IUserSQL.java" />
-        <option value="$PROJECT_DIR$/src/sample/Data/UserSQLContext.java" />
         <option value="$PROJECT_DIR$/src/sample/Repos/UserRepository.java" />
-        <option value="$PROJECT_DIR$/src/sample/ViewModel/UserUIRepo.java" />
         <option value="$PROJECT_DIR$/src/sample/UI/Home.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Exceptions/PasswordIncorrectException.java" />
-        <option value="$PROJECT_DIR$/src/sample/Controllers/RegisterController.java" />
-        <option value="$PROJECT_DIR$/src/sample/Interfaces/IPasswordUI.java" />
-        <option value="$PROJECT_DIR$/src/sample/ViewModel/PasswordUIRepo.java" />
         <option value="$PROJECT_DIR$/src/sample/Interfaces/IPasswordSQL.java" />
         <option value="$PROJECT_DIR$/src/sample/Repos/PasswordRepositry.java" />
         <option value="$PROJECT_DIR$/src/sample/Data/PasswordSQLContext.java" />
-        <option value="$PROJECT_DIR$/src/sample/Controllers/HomeController.java" />
         <option value="$PROJECT_DIR$/src/sample/Logic/EncryptDecrypt.java" />
+        <option value="$PROJECT_DIR$/src/sample/Interfaces/IPasswordUI.java" />
+        <option value="$PROJECT_DIR$/src/sample/ViewModel/PasswordUIRepo.java" />
         <option value="$PROJECT_DIR$/src/sample/Logic/Encrypt.java" />
-        <option value="$PROJECT_DIR$/src/sample/Logic/User.java" />
         <option value="$PROJECT_DIR$/src/sample/Logic/Password.java" />
+        <option value="$PROJECT_DIR$/src/sample/Controllers/PhoneLogin.java" />
+        <option value="$PROJECT_DIR$/src/sample/UI/PhoneLogin.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/Controllers/RegisterController.java" />
+        <option value="$PROJECT_DIR$/PasswordEncryption.iml" />
+        <option value="$PROJECT_DIR$/src/sample/Data/UserSQLContext.java" />
+        <option value="$PROJECT_DIR$/src/sample/Controllers/HomeController.java" />
+        <option value="$PROJECT_DIR$/src/sample/Controllers/PhoneLoginController.java" />
+        <option value="$PROJECT_DIR$/src/sample/UI/ForgotPassword.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/Controllers/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/sample/Interfaces/IUserUI.java" />
+        <option value="$PROJECT_DIR$/src/sample/ViewModel/UserUIRepo.java" />
+        <option value="$PROJECT_DIR$/src/sample/Controllers/ForgotPasswordController.java" />
+        <option value="$PROJECT_DIR$/src/sample/Logic/User.java" />
       </list>
     </option>
   </component>
@@ -271,8 +340,42 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PasswordEncryption" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; 1.8 &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PasswordEncryption" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; 1.8 &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twilio-7.12.0-jar-with-dependencies.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="PasswordEncryption" />
@@ -479,8 +582,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -499,6 +600,9 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="SearchEverywhereHistoryKey" value="compiler&#9;ACTION&#9;EditorPopupMenu.Run" />
     <property name="settings.editor.selected.configurable" value="reference.idesettings.debugger.dataviews" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -965,12 +1069,19 @@
       <workItem from="1498051228782" duration="1869000" />
       <workItem from="1498072740143" duration="5198000" />
       <workItem from="1498123749903" duration="9425000" />
-      <workItem from="1498160476507" duration="4083000" />
+      <workItem from="1498160476507" duration="4123000" />
+      <workItem from="1498209597763" duration="4100000" />
+      <workItem from="1498244147012" duration="5116000" />
+      <workItem from="1498386796979" duration="1703000" />
+      <workItem from="1498417757973" duration="3858000" />
+      <workItem from="1498510274272" duration="4885000" />
+      <workItem from="1498555376688" duration="3048000" />
+      <workItem from="1498589678239" duration="5932000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45457000" />
+    <option name="totallyTimeSpent" value="74139000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -986,14 +1097,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35126236" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24149287" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2484375" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23020834" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1011,6 +1121,7 @@
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1025,15 +1136,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/sample/Logic/Encrypt.java</url>
-          <line>45</line>
-          <properties />
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="31" />
+      <option name="time" value="42" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1042,89 +1145,16 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/sample/Start.form" />
-    <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#706#707#0" expanded="false" />
-            <element signature="e#733#734#0" expanded="false" />
-            <element signature="e#1295#1296#0" expanded="false" />
-            <element signature="e#1368#1369#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Start.java" />
-    <entry file="file://$PROJECT_DIR$/src/sample/Start.form" />
-    <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#706#707#0" expanded="false" />
-            <element signature="e#733#734#0" expanded="false" />
-            <element signature="e#1295#1296#0" expanded="false" />
-            <element signature="e#1368#1369#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml" />
     <entry file="file://$PROJECT_DIR$/src/sample/Controllers/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#706#707#0" expanded="false" />
-            <element signature="e#733#734#0" expanded="false" />
-            <element signature="e#1295#1296#0" expanded="false" />
-            <element signature="e#1368#1369#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml" />
     <entry file="file://$PROJECT_DIR$/src/sample/Start.java" />
     <entry file="file://$PROJECT_DIR$/src/sample/Start.form" />
-    <entry file="file://$PROJECT_DIR$/PasswordEncryption.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/javafx-src.zip!/javafx/stage/Window.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
@@ -1136,16 +1166,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="140" column="0" lean-forward="false" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/UI/Login.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -1187,25 +1207,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/jre/lib/ext/sqljdbc42.jar!/com/microsoft/sqlserver/jdbc/SQLServerStatement.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="461" column="0" lean-forward="false" selection-start-line="461" selection-start-column="0" selection-end-line="461" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/jre/lib/ext/sqljdbc42.jar!/com/microsoft/sqlserver/jdbc/SQLServerConnection.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="336" column="0" lean-forward="false" selection-start-line="336" selection-start-column="0" selection-end-line="336" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="16" column="56" lean-forward="false" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1213,13 +1218,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="317">
           <caret line="46" column="45" lean-forward="false" selection-start-line="46" selection-start-column="45" selection-end-line="46" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#706#707#0" expanded="false" />
-            <element signature="e#733#734#0" expanded="false" />
-            <element signature="e#1295#1296#0" expanded="false" />
-            <element signature="e#1368#1369#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1227,21 +1225,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/ViewModel/UserUIRepo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding>
-            <element signature="e#291#292#0" expanded="false" />
-            <element signature="e#324#325#0" expanded="false" />
-            <element signature="e#394#395#0" expanded="false" />
-            <element signature="e#452#453#0" expanded="false" />
-            <element signature="e#507#508#0" expanded="false" />
-            <element signature="e#559#560#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1260,34 +1243,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="7" column="15" lean-forward="false" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
-          <folding>
-            <element signature="e#169#170#0" expanded="false" />
-            <element signature="e#231#232#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/RegisterController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="93" column="62" lean-forward="false" selection-start-line="93" selection-start-column="62" selection-end-line="93" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Interfaces/IUserUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Interfaces/IPasswordUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -1302,13 +1257,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="24" column="43" lean-forward="false" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#439#440#0" expanded="true" />
-            <element signature="e#489#490#0" expanded="true" />
-            <element signature="e#549#550#0" expanded="true" />
-            <element signature="e#599#600#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1316,52 +1264,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="840">
           <caret line="46" column="33" lean-forward="false" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1498128877642" expanded="true" signature="534:576" ph="SELECT * FRO... Passwords" />
-            <marker date="1498128877642" expanded="true" signature="1279:1355" ph="INSERT INTO Passwords... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1155">
-          <caret line="70" column="74" lean-forward="false" selection-start-line="70" selection-start-column="74" selection-end-line="70" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Repos/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <element signature="e#526#527#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Data/UserSQLContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1498076429848" expanded="true" signature="439:498" ph="INSERT INTO Users... " />
-            <marker date="1498076429848" expanded="true" signature="1218:1274" ph="SELECT * FRO... Users" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/ViewModel/PasswordUIRepo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#351#352#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1369,11 +1271,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="117" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
-          <folding>
-            <element signature="e#3336#3337#0" expanded="false" />
-            <element signature="e#4362#4363#0" expanded="false" />
-            <element signature="e#4393#4394#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1381,7 +1278,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="262">
           <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1389,53 +1285,254 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="157" column="0" lean-forward="false" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
-          <folding>
-            <element signature="e#4603#4604#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Logic/EncryptDecrypt.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/Logic/EncryptDecrypt.java" />
+    <entry file="file://$PROJECT_DIR$/src/sample/Interfaces/IPasswordUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="23" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-61">
-          <caret line="102" column="0" lean-forward="false" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3346#3347#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="189">
+          <caret line="12" column="47" lean-forward="false" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Logic/Encrypt.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="716">
-          <caret line="50" column="24" lean-forward="false" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
+        <state relative-caret-position="168">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Repos/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Logic/Password.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="44" column="9" lean-forward="false" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/ViewModel/PasswordUIRepo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="23" column="41" lean-forward="false" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/PhoneLogin.java" />
+    <entry file="file://$PROJECT_DIR$/src/sample/UI/Login.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Logic/User.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/UI/PhoneLogin.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="84" column="20" lean-forward="false" selection-start-line="84" selection-start-column="20" selection-end-line="84" selection-end-column="20" />
+        <state relative-caret-position="168">
+          <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/RegisterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1701">
+          <caret line="95" column="117" lean-forward="false" selection-start-line="95" selection-start-column="117" selection-end-line="95" selection-end-column="117" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#772#773#0" expanded="false" />
+            <element signature="e#799#800#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/jre/lib/ext/sqljdbc42.jar!/com/microsoft/sqlserver/jdbc/SQLServerPreparedStatement.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="220" column="0" lean-forward="false" selection-start-line="220" selection-start-column="0" selection-end-line="220" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/jre/lib/ext/sqljdbc42.jar!/com/microsoft/sqlserver/jdbc/SQLServerStatement.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="461" column="0" lean-forward="false" selection-start-line="461" selection-start-column="0" selection-end-line="461" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/jre/lib/ext/sqljdbc42.jar!/com/microsoft/sqlserver/jdbc/SQLServerConnection.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="332" column="0" lean-forward="false" selection-start-line="332" selection-start-column="0" selection-end-line="332" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/jre/lib/ext/twilio-7.12.0.jar!/com/twilio/example/ValidationExample.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/jre/lib/ext/twilio-7.12.0.jar!/com/twilio/http/TwilioRestClient.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/jre/lib/ext/twilio-7.12.0-jar-with-dependencies.jar!/com/twilio/http/TwilioRestClient.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="26" column="11" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/jre/lib/ext/twilio-7.12.0-sources.jar!/com/twilio/http/TwilioRestClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1764">
+          <caret line="95" column="26" lean-forward="false" selection-start-line="95" selection-start-column="26" selection-end-line="95" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#469#470#0" expanded="false" />
+            <element signature="e#532#533#0" expanded="false" />
+            <element signature="e#1366#1367#0" expanded="false" />
+            <element signature="e#1399#1400#0" expanded="false" />
+            <element signature="e#1432#1433#0" expanded="false" />
+            <element signature="e#1461#1462#0" expanded="false" />
+            <element signature="e#1506#1507#0" expanded="false" />
+            <element signature="e#1541#1542#0" expanded="false" />
+            <element signature="e#1582#1583#0" expanded="false" />
+            <element signature="e#1615#1616#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Data/UserSQLContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="53" column="66" lean-forward="false" selection-start-line="53" selection-start-column="66" selection-end-line="53" selection-end-column="66" />
+          <folding>
+            <marker date="1498592228449" expanded="true" signature="439:512" ph="INSERT INTO Users... " />
+            <marker date="1498592228449" expanded="true" signature="1284:1340" ph="SELECT * FRO... Users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="649">
+          <caret line="54" column="51" lean-forward="false" selection-start-line="54" selection-start-column="51" selection-end-line="54" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/jre/lib/ext/twilio-7.12.0.jar!/com/twilio/rest/lookups/v1/PhoneNumber.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PasswordEncryption.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="55" lean-forward="false" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/jre/lib/ext/twilio-7.12.0-javadoc.jar!/com/twilio/http/TwilioRestClient.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/PhoneLoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="58" column="47" lean-forward="false" selection-start-line="58" selection-start-column="47" selection-end-line="58" selection-end-column="47" />
+          <folding>
+            <element signature="e#1311#1312#0" expanded="true" />
+            <element signature="e#1358#1359#0" expanded="true" />
+            <element signature="e#1871#1872#0" expanded="true" />
+            <element signature="e#1912#1913#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/UI/ForgotPassword.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="102" column="61" lean-forward="false" selection-start-line="102" selection-start-column="61" selection-end-line="102" selection-end-column="61" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Logic/Password.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/Interfaces/IUserUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="35" column="44" lean-forward="true" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
+        <state relative-caret-position="231">
+          <caret line="13" column="41" lean-forward="false" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/ViewModel/UserUIRepo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="26" column="86" lean-forward="false" selection-start-line="26" selection-start-column="86" selection-end-line="26" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/ForgotPasswordController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="43" column="34" lean-forward="false" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#417#418#0" expanded="true" />
+            <element signature="e#444#445#0" expanded="true" />
+            <element signature="e#1220#1221#0" expanded="true" />
+            <element signature="e#1269#1270#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Logic/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="120" column="0" lean-forward="false" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1445,6 +1542,76 @@
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>PasswordEncryption</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ScopeChooserConfigurable.UI">
         <settings>
           <splitter-proportions>

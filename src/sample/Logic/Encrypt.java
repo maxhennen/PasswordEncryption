@@ -1,54 +1,32 @@
 package sample.Logic;
 
+import sun.security.krb5.internal.crypto.Des;
+
 import javax.crypto.*;
+import javax.crypto.spec.DESKeySpec;
 import javax.crypto.spec.IvParameterSpec;
+import javax.crypto.spec.PBEKeySpec;
 import javax.crypto.spec.SecretKeySpec;
+import javax.swing.*;
+import java.io.File;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
+import java.security.spec.InvalidKeySpecException;
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Base64;
 
 /**
  * Created by maxhe on 18-6-2017.
  */
 public class Encrypt  {
 
-    private SecretKey Key;
-    public SecretKey getKey(){return Key;}
-
-    public String Encryption(byte[] input, SecretKey myKey){
-        try {
-            Cipher cipher = Cipher.getInstance("DES/ECB/PKCS5Padding");
-            cipher.init(Cipher.ENCRYPT_MODE,myKey);
-            byte[] encrypted = cipher.doFinal(input);
-            return encrypted.toString();
-    }
-
-        catch (NoSuchPaddingException e){
-            e.printStackTrace();
-        }
-        catch (NoSuchAlgorithmException e){
-            e.printStackTrace();
-        }
-        catch (InvalidKeyException e){
-            e.printStackTrace();
-        }
-        catch (IllegalBlockSizeException e){
-            e.printStackTrace();
-        }
-        catch (BadPaddingException e){
-            e.printStackTrace();
-        }
-        return null;
-    }
-    public SecretKey RandomKey() {
-        try {
-            KeyGenerator keyGenerator = KeyGenerator.getInstance("DES");
-            SecretKey myKey = keyGenerator.generateKey();
-            return myKey;
-        }
-        catch (NoSuchAlgorithmException e){
-            e.printStackTrace();
-            return null;
-        }
-    }
 }

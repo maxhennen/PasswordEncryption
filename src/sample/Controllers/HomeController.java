@@ -23,37 +23,36 @@ import java.awt.event.ActionEvent;
  */
 public class HomeController extends Controller {
 
-    private Label lblUitloggen;
+    private Label lblLogout;
     private Button btnAddPassword;
-    private TextField tfContent;
-    private PasswordField tfPassword;
-    private PasswordField tfPasswordConfirm;
+    private TextField tfAddContent;
+    private PasswordField tfAddPassword;
+    private PasswordField tfAddPasswordConfirm;
     private Label lblWelkom;
     private PasswordUIRepo PasswordRepo;
 
-    private int X = 0;
-    private int Y = 70;
+    private int Y = 100;
 
     public HomeController(User user){
         super(user);
     }
 
     public void setLayout(){
-        lblUitloggen = new Label();
-        lblUitloggen.setLayoutY(10);
-        lblUitloggen.setLayoutX(10);
-        lblUitloggen.setPrefHeight(27);
-        lblUitloggen.setPrefWidth(100);
-        lblUitloggen.setStyle("-fx-underline: true;");
-        lblUitloggen.setText("Log out");
-        lblUitloggen.setOnMouseClicked(new EventHandler<MouseEvent>() {
+        lblLogout = new Label();
+        lblLogout.setLayoutY(10);
+        lblLogout.setLayoutX(10);
+        lblLogout.setPrefHeight(27);
+        lblLogout.setPrefWidth(100);
+        lblLogout.setStyle("-fx-underline: true;");
+        lblLogout.setText("Log out");
+        lblLogout.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
                 newScene("Login.fxml",new LoginController(null));
                 closeScene(event);
             }
         });
-        getAnchorpane().getChildren().add(lblUitloggen);
+        getAnchorpane().getChildren().add(lblLogout);
 
         lblWelkom = new Label();
         lblWelkom.setLayoutX(130);
@@ -63,32 +62,29 @@ public class HomeController extends Controller {
         lblWelkom.setText("Welkom " + getUser().getName());
         getAnchorpane().getChildren().add(lblWelkom);
 
+        tfAddContent = new TextField();
+        tfAddContent.setLayoutX(50);
+        tfAddContent.setLayoutY(50);
+        tfAddContent.setPrefHeight(27);
+        tfAddContent.setPrefWidth(200);
+        tfAddContent.setPromptText("Content");
+        getAnchorpane().getChildren().add(tfAddContent);
 
-        //foreach
+        tfAddPassword = new PasswordField();
+        tfAddPassword.setLayoutX(270);
+        tfAddPassword.setLayoutY(50);
+        tfAddPassword.setPrefWidth(200);
+        tfAddPassword.setPrefHeight(27);
+        tfAddPassword.setPromptText("Password");
+        getAnchorpane().getChildren().add(tfAddPassword);
 
-        tfContent = new TextField();
-        tfContent.setLayoutX(50);
-        tfContent.setLayoutY(50);
-        tfContent.setPrefHeight(27);
-        tfContent.setPrefWidth(200);
-        tfContent.setPromptText("Content");
-        getAnchorpane().getChildren().add(tfContent);
-
-        tfPassword = new PasswordField();
-        tfPassword.setLayoutX(270);
-        tfPassword.setLayoutY(50);
-        tfPassword.setPrefWidth(200);
-        tfPassword.setPrefHeight(27);
-        tfPassword.setPromptText("Password");
-        getAnchorpane().getChildren().add(tfPassword);
-
-        tfPasswordConfirm = new PasswordField();
-        tfPasswordConfirm.setLayoutX(490);
-        tfPasswordConfirm.setLayoutY(50);
-        tfPasswordConfirm.setPrefWidth(200);
-        tfPasswordConfirm.setPrefHeight(27);
-        tfPasswordConfirm.setPromptText("Confirm Password");
-        getAnchorpane().getChildren().add(tfPasswordConfirm);
+        tfAddPasswordConfirm = new PasswordField();
+        tfAddPasswordConfirm.setLayoutX(490);
+        tfAddPasswordConfirm.setLayoutY(50);
+        tfAddPasswordConfirm.setPrefWidth(200);
+        tfAddPasswordConfirm.setPrefHeight(27);
+        tfAddPasswordConfirm.setPromptText("Confirm Password");
+        getAnchorpane().getChildren().add(tfAddPasswordConfirm);
 
         btnAddPassword = new Button();
         btnAddPassword.setLayoutX(710);
@@ -103,17 +99,62 @@ public class HomeController extends Controller {
             }
         });
         getAnchorpane().getChildren().add(btnAddPassword);
-    }
 
-    public int calculateY(){
-        return Y = Y + 40;
+        PasswordRepo = new PasswordUIRepo(new Password());
+
+
+        for (Password p:PasswordRepo.passwordsUser(getUser())){
+            TextField tfContent = new TextField();
+            tfContent.setLayoutY(Y);
+            tfContent.setLayoutX(50);
+            tfContent.setPrefWidth(200);
+            tfContent.setPrefHeight(27);
+            tfContent.setText(p.getContent());
+            getAnchorpane().getChildren().add(tfContent);
+
+            PasswordField pfPassword = new PasswordField();
+            pfPassword.setLayoutY(Y);
+            pfPassword.setLayoutX(270);
+            pfPassword.setPrefHeight(27);
+            pfPassword.setPrefWidth(200);
+            pfPassword.setText(p.getPassword());
+            getAnchorpane().getChildren().add(pfPassword);
+
+            PasswordField pfPasswordConfirm = new PasswordField();
+            pfPasswordConfirm.setLayoutX(490);
+            pfPasswordConfirm.setLayoutY(Y);
+            pfPasswordConfirm.setPrefWidth(200);
+            pfPasswordConfirm.setPrefHeight(27);
+            pfPasswordConfirm.setText(p.getPassword());
+            getAnchorpane().getChildren().add(pfPasswordConfirm);
+
+            Button btnChange = new Button();
+            btnChange.setLayoutY(Y);
+            btnChange.setLayoutX(710);
+            btnChange.setPrefWidth(200);
+            btnChange.setPrefHeight(27);
+            btnChange.setText("Change");
+            getAnchorpane().getChildren().add(btnChange);
+
+            Button btnDelete = new Button();
+            btnDelete.setLayoutX(930);
+            btnDelete.setLayoutY(Y);
+            btnDelete.setPrefHeight(27);
+            btnDelete.setPrefWidth(200);
+            btnDelete.setText("Delete");
+            getAnchorpane().getChildren().add(btnDelete);
+
+            Y = Y + 40;
+        }
     }
 
     public void newPassword(){
         try {
-            if (tfPassword.getText().equals(tfPasswordConfirm.getText())) {
+            if (tfAddPassword.getText().equals(tfAddPasswordConfirm.getText())) {
                 PasswordRepo = new PasswordUIRepo(new Password());
-                PasswordRepo.newPassword(getUser(),tfContent.getText(),tfPassword.getText());
+                PasswordRepo.newPassword(getUser(),tfAddContent.getText(),tfAddPassword.getText());
+                JOptionPane.showMessageDialog(null,"Password has been added!");
+                setLayout();
             }
             else {
                 throw new PasswordIncorrectException();
