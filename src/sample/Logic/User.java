@@ -6,12 +6,20 @@ import com.twilio.type.PhoneNumber;
 import com.twilio.exception.TwilioException;
 import com.twilio.http.TwilioRestClient;
 import com.twilio.rest.chat.v1.service.channel.MessageCreator;
+import jdk.nashorn.internal.scripts.JO;
 import org.apache.commons.mail.EmailException;
 import org.apache.commons.mail.SimpleEmail;
 import org.hsqldb.Session;
 import sample.Data.UserSQLContext;
 import sample.Interfaces.IUserUI;
 import sample.Repos.UserRepository;
+
+import javax.mail.Authenticator;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Transport;
+import javax.mail.internet.AddressException;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 import javax.net.*;
 
 import javax.crypto.SecretKey;
@@ -56,8 +64,6 @@ public class User implements IUserUI {
     public void setPhoneNumber(String phoneNumber){PhoneNumber = phoneNumber;}
 
     private Encrypt Encrypt = new Encrypt();
-    private String TwilioSID = "AC0e7ecf6b3e893d1bc8ca45799f76f6bb";
-    private String TwilioAuth = "8bc638717b8f3a0804e2ed1f24a695d6";
 
     public User newUser(String name, String email, String password, String phone){
         setName(name);
@@ -88,6 +94,8 @@ public class User implements IUserUI {
     }
 
     public String SendSMS(String phoneNumber){
+        String TwilioSID = "AC0e7ecf6b3e893d1bc8ca45799f76f6bb";
+        String TwilioAuth = "8bc638717b8f3a0804e2ed1f24a695d6";
         try {
             Twilio.init(TwilioSID, TwilioAuth);
 
@@ -114,23 +122,61 @@ public class User implements IUserUI {
         return sb.toString();
     }
 
-    public String sendNewPassword(String email){
+    public void sendNewPassword(String email){
         try {
-            String newPassword = randomString();
+            UserRepo = new UserRepository(new UserSQLContext());
+            User user = UserRepo.checkUser(email);
+            if(user.getEmail() != null) {
 
-            SimpleEmail simpleEmail = new SimpleEmail();
-            simpleEmail.setHostName("smtp.gmail.com");
-            simpleEmail.addTo(email, "Unknown");
-            simpleEmail.setFrom("no-reply@passwordSecurity.com", "PasswordSecurity");
-            simpleEmail.setSubject("New Password PasswordSecurity");
-            simpleEmail.setMsg("Here's your new pasword: " + newPassword);
-            simpleEmail.send();
-            return newPassword;
+                String newPassword = randomString();
+
+                String userSMTP = "hennenmax@gmail.com";
+                String passwordSMTP = getSMTPPassword();
+
+                Properties props = new Properties();
+                props.put("mail.smtp.auth", "true");
+                props.put("mail.smtp.starttls.enable", "true");
+                props.put("mail.smtp.host", "smtp.gmail.com");
+                props.put("mail.smtp.port", "587");
+                javax.mail.Session session = javax.mail.Session.getDefaultInstance(props, new Authenticator() {
+                    @Override
+                    protected PasswordAuthentication getPasswordAuthentication() {
+                        return new PasswordAuthentication(userSMTP, passwordSMTP);
+                    }
+                });
+
+                MimeMessage message = new MimeMessage(session);
+                message.setFrom(new InternetAddress("PasswordSecurity" + "<" + "no-reply@passwordsecurity.com" + ">"));
+                message.setRecipients(MimeMessage.RecipientType.TO, InternetAddress.parse(email));
+                message.setSubject("New password PasswordSecurity");
+                String content = "Hey User,\n Here's your new password: " + newPassword + "\n Regardings PasswordSecurity";
+                message.setContent(content, "text/html; charset=UTF-8");
+
+                UserRepo.changePassword(email,MD5Password(newPassword));
+
+                Transport.send(message);
+                JOptionPane.showMessageDialog(null,"Mail is send to your adres");
+            }
+
+            else {
+                JOptionPane.showMessageDialog(null,"Email adress is unknown!");
+            }
         }
-        catch (EmailException e){
+        catch (Exception e){
+            e.printStackTrace();
+        }
+
+    }
+
+    public String getSMTPPassword(){
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader( "smtp.txt"));
+            String line = reader.readLine();
+            return line;
+        }
+        catch (IOException e){
             e.printStackTrace();
             return null;
         }
-
     }
 }

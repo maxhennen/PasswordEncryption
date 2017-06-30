@@ -44,6 +44,7 @@ public class Password implements IPasswordUI {
     public void newPassword(User user, String password, String content){
        // setPassword(Encrypt.Encryption(password,user.loadKey(user.getEmail())));
         setContent(content);
+        Encrypt.Start();
         PasswordRepo = new PasswordRepositry(new PasswordSQLContext());
         PasswordRepo.newPassword(user,this);
     }

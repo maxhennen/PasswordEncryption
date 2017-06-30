@@ -10,4 +10,6 @@ import java.util.ArrayList;
 public interface IUserSQL {
     User newUser(User user);
     User loginUser(String email, String password);
+    void changePassword(String mail, String newPassword);
+    User checkUser(String email);
 }

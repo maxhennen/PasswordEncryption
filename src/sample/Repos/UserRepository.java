@@ -22,4 +22,7 @@ public class UserRepository {
     public User loginUser(String email, String password){
         return Context.loginUser(email,password);
     }
+
+    public void changePassword(String email, String password){Context.changePassword(email,password);}
+    public User checkUser(String email){return Context.checkUser(email);}
 }

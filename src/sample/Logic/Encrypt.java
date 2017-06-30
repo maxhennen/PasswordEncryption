@@ -28,5 +28,15 @@ import java.util.Base64;
  * Created by maxhe on 18-6-2017.
  */
 public class Encrypt  {
-
+    public SecretKeySpec createKey(char[] password, byte[] salt, int iterationCount, int keylength){
+        try {
+            SecretKeyFactory secretKeyFactory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA512");
+            PBEKeySpec keySpec = new PBEKeySpec(password,salt,iterationCount,keylength);
+            SecretKey key = secretKeyFactory.generateSecret(keySpec);
+            return new SecretKeySpec(key.getEncoded(),"AES");
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+    }
 }

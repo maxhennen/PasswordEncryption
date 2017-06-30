@@ -24,6 +24,6 @@ public class UserUIRepo {
         return Context.Login(email,password);
     }
     public String SendSMS(String phoneNumber){return Context.SendSMS(phoneNumber);}
-    public String sendNewPassword(String email){return Context.sendNewPassword(email);}
+    public void sendNewPassword(String email){Context.sendNewPassword(email);}
 
 }
